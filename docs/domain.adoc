@@ -1,0 +1,54 @@
+== Domain Model
+
+[plantuml]
+....
+rectangle Domain {
+    class User 
+    class Board 
+    class Transaction
+    class Budget
+    class BudgetExceeded <<DomainEvent>>
+    class Category
+    Class Alert
+    class Report
+
+    User --> Board : view
+    User --> Transaction : do
+    User --> Budget : configure
+    Transaction --> Category : have
+
+    Transaction --> BudgetExceeded : trigger
+    BudgetExceeded --> Alert : notify
+    Alert --> User : notify
+
+    Board --> Report : generate
+
+    Board --> Transaction : record
+    Board --> Budget : set
+
+
+}
+....
+
+== Aggregate Model
+[plantuml]
+....
+class User <<Aggregate>> 
+class Board <<Aggregate root>>
+class Transaction <<Aggregate>>
+class Budget <<Aggregate>>
+class BudgetExceeded <<AggregateEvent>>
+class Category <<Aggregate>>
+class Alert <<Aggregate>>
+class User <<Aggregate>>
+
+User -- Board
+Board -- Transaction
+Board -- Budget
+Transaction -- Category
+Transaction -- BudgetExceeded
+Budget -- BudgetExceeded
+BudgetExceeded -- Alert
+Alert -- User
+....
+
