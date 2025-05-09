@@ -1,4 +1,10 @@
-*Development documentation
-**Introduction and goals
-**System Requirements
-**System design
+* Development documentation
+** xref:introduction.adoc[Introduction and goals]
+** System Requirements
+*** xref:develop:requirements/domain-model.adoc[Domain model]
+*** xref:develop:requirements/usecases.adoc[Use cases]
+** System design
+*** xref:develop:design/architecture.adoc[Architecture]
+*** xref:develop:design/ux-ui.adoc[UX/UI]
+*** xref:develop:design/api.adoc[API design]
+*** xref:develop:design/database.adoc[Database design]
