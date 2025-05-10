@@ -1,0 +1,46 @@
+= Use cases
+
+== Authentication use cases
+The following use cases are related to the authentication module of the application. They describe the functionality that the application should provide to users in terms of authentication and authorization.
+[cols="1,3,1"]
+|===
+| code | Description | Priority
+| xref:requirements/usecases/auth-001.adoc[Auth-001] | As a user , I want to be able to register in the app. | High
+| xref:requirements/usecases/auth-002.adoc[Auth-002] | As a user , I want to be able to login in the app. | High
+| xref:requirements/usecases/auth-003.adoc[Auth-003] | As a user , I want to be able to logout in the app. | High
+| xref:requirements/usecases/auth-004.adoc[Auth-004] | As a user , I want to be able to reset my password. | medium
+| xref:requirements/usecases/auth-005.adoc[Auth-005] | As a user , I want to be able to change my password. | medium
+|===
+
+== Budget use cases
+The following use cases are related to the budget module of the application. They describe the functionality that the application should provide to users in terms of budgets.
+[cols="1,3,1"]
+|===
+| code | Description | Priority
+| xref:requirements/usecases/budget-001.adoc[Budget-001] | As a user , I want to be able to create a budget. | High
+| xref:requirements/usecases/budget-002.adoc[Budget-002] | As a user , I want to be able to edit a budget. | Medium
+| xref:requirements/usecases/budget-003.adoc[Budget-003] | As a user , I want to be able to delete a budget. | High
+| xref:requirements/usecases/budget-004.adoc[Budget-004] | As a user , I want to be able to view a budget. | High
+|===
+
+== Transactions use cases
+The following use cases are related to the transactions module of the application. They describe the functionality that the application should provide to users in terms of transactions.
+[cols="1,3,1"]
+|===
+| code | Description | Priority
+| xref:requirements/usecases/transaction-001.adoc[Transaction-001] | As a user , I want to be able to create a transaction. Expenses and incomes | High
+| xref:requirements/usecases/transaction-002.adoc[Transaction-002] | As a user , I want to be able to edit a transaction. | Medium
+| xref:requirements/usecases/transaction-003.adoc[Transaction-003] | As a user , I want to be able to delete a transaction. | High
+| xref:requirements/usecases/transaction-004.adoc[Transaction-004] | As a user , I want to be able to view a transaction. | High
+|===
+
+== Categories use cases
+The following use cases are related to the categories module of the application. They describe the functionality that the application should provide to users in terms of categories.
+[cols="1,3,1"]
+|===
+| code | Description | Priority
+| xref:requirements/usecases/category-001.adoc[Category-001] | As a user , I want to be able to create a category. | High
+| xref:requirements/usecases/category-002.adoc[Category-002] | As a user , I want to be able to edit a category. | Medium
+| xref:requirements/usecases/category-003.adoc[Category-003] | As a user , I want to be able to delete a category. | High
+| xref:requirements/usecases/category-004.adoc[Category-004] | As a user , I want to be able to view a category. | High
+|===
