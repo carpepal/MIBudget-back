@@ -22,3 +22,6 @@ paths:
                   message:
                     type: string
                     example: "Hello, world!"
+components:
+  schemas:
+    
