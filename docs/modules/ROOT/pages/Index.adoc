@@ -1,0 +1,3 @@
+= My Budget
+
+This documentation is presented as a development journal of the application, including the goals, designs, and decisions.

@@ -1,0 +1,7 @@
+name: mybudget
+title: MyBudget
+version:
+  main: latest
+  release/v(?<version>+({0..9}).+({0..9}))): $<version>
+nav:
+  - modules/ROOT/nav.adoc

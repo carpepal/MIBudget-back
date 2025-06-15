@@ -1,0 +1,37 @@
+= Domain Model
+
+[plantuml]
+....
+    class User
+    class Board 
+    class Category
+    class Budget
+    class Transaction
+    class Goals
+
+    User ---> Board : "has 1..*"
+    Board ---> Goals : "has goals configured\n by the savings generated in\n the board"
+    Board ---> Transaction : "stores 0..*"
+    Category ---> Transaction : "categorizes 0..*"
+    Category ---> Budget : "configures"
+....
+
+
+== Aggregate Model
+[plantuml]
+....
+    class User<<Aggregate>>
+    class Board<<Aggregate Root>> 
+    class Category<<Aggregate>>
+    class Budget
+    class Transaction<<Aggregate>>
+    class Goals<<Aggregate>>
+
+
+    User ||--{ Board
+    Board ||--{ Goals 
+    Board ||--{ Transaction 
+    Category |o--{ Transaction
+    Category ||--o| Budget
+....
+

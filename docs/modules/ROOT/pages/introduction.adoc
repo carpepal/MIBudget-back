@@ -1,0 +1,18 @@
+= Introduction and goals
+
+This tool is made to help you manage your budgets. Create a budget and track your expenses.
+
+== Goals
+
+[cols="1,1,2"]
+|===
+| Goal | Priority | Description
+
+| Manage budgets | High | Create a budget and track your expenses.
+| Manage expenses | High | Create an expense and track it.
+| Manage accounts | High | Create an account and track it.
+| Manage categories | Medium | Create a category and track it.
+| Manage reports | Low | Create a report and track it.
+| Manage settings | Low | Create a settings page and track it.
+|===
+
