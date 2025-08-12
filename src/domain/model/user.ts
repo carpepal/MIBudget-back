@@ -20,7 +20,8 @@ export class User {
   }
 
   public updatePassword(password: string): void {
-    this.password = bcrypt.hashSync(password, 10);
+  public async updatePassword(password: string): Promise<void> {
+    this.password = await bcrypt.hash(password, 10);
   }
 
   public validatePassword(password: string): boolean {

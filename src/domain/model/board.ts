@@ -1,7 +1,8 @@
 import { UUID } from "node:crypto";
 import { UserId } from "./user";
 import { randomUUID } from "node:crypto";
-
+import { UUID, randomUUID } from "node:crypto";
+import { UserId } from "./user";
 export class Board {
   public readonly id: BoardId;
   public name: string;
