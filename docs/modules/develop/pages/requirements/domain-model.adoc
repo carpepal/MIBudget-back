@@ -7,7 +7,6 @@ This diagram represents the conceptual model of an application for personal expe
     class User
     class Board 
     class Category
-    class Budget
     class Transaction
     class Goals
 
@@ -15,7 +14,6 @@ This diagram represents the conceptual model of an application for personal expe
     Board ---> Goals : "has goals configured\n by the savings generated in\n the board"
     Board ---> Transaction : "stores 0..*"
     Category ---> Transaction : "categorizes 0..*"
-    Category ---> Budget : "configures"
 ....
 
 
@@ -28,7 +26,6 @@ This diagram shows the aggregate structure of the domain according to Domain-Dri
     class User<<Aggregate>>
     class Board<<Aggregate Root>> 
     class Category<<Aggregate>>
-    class Budget
     class Transaction<<Aggregate>>
     class Goals<<Aggregate>>
 
@@ -37,7 +34,6 @@ This diagram shows the aggregate structure of the domain according to Domain-Dri
     Board ||--{ Goals 
     Board ||--{ Transaction 
     Category |o--{ Transaction
-    Category ||--o| Budget
 ....
 
 == Database Model 
