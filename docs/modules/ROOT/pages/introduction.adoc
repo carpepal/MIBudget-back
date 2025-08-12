@@ -16,3 +16,19 @@ This tool is made to help you manage your budgets. Create a budget and track you
 | Manage settings | Low | Create a settings page and track it.
 |===
 
+== Development phases
+
+[cols="1,2,3"]
+|===
+| Phase | Description | Use cases
+
+| v0.1 | User registration and authentication, create boards, categories and transactions. | xref:requirements/usecases/auth-001.adoc[Auth-001], xref:requirements/usecases/auth-002.adoc[Auth-002], xref:requirements/usecases/auth-003.adoc[Auth-003], xref:requirements/usecases/board-001.adoc[Board-001], xref:requirements/usecases/category-001.adoc[Category-001], xref:requirements/usecases/transaction-001.adoc[Transaction-001]
+
+| v0.3 | manage transactions, boards and categories. | xref:requirements/usecases/transaction-002.adoc[Transaction-002], xref:requirements/usecases/transaction-003.adoc[Transaction-003], xref:requirements/usecases/transaction-004.adoc[Transaction-004], xref:requirements/usecases/board-002.adoc[Board-002], xref:requirements/usecases/board-003.adoc[Board-003], xref:requirements/usecases/board-004.adoc[Board-004], xref:requirements/usecases/category-002.adoc[Category-002], xref:requirements/usecases/category-003.adoc[Category-003], xref:requirements/usecases/category-004.adoc[Category-004]
+
+| v0.6 | add options to create budgets and goals. | xref:requirements/usecases/budget-001.adoc[Budget-001], xref:requirements/usecases/budget-004.adoc[Budget-004], xref:requirements/usecases/goal-001.adoc[Goal-001], xref:requirements/usecases/goal-004.adoc[Goal-004]
+
+| v0.8 | manage budgets and goals. | xref:requirements/usecases/budget-002.adoc[Budget-002], xref:requirements/usecases/budget-003.adoc[Budget-003], xref:requirements/usecases/goal-002.adoc[Goal-002], xref:requirements/usecases/goal-003.adoc[Goal-003], xref:requirements/usecases/goal-005.adoc[Goal-005], xref:requirements/usecases/auth-004.adoc[Auth-004], xref:requirements/usecases/auth-005.adoc[Auth-005]
+
+| v1.0 | add options to create reports and settings. | xref:requirements/usecases/report-001.adoc[Report-001], xref:requirements/usecases/report-002.adoc[Report-002], xref:requirements/usecases/report-003.adoc[Report-003], xref:requirements/usecases/report-004.adoc[Report-004], xref:requirements/usecases/report-005.adoc[Report-005], xref:requirements/usecases/board-005.adoc[Board-005]
+|===
