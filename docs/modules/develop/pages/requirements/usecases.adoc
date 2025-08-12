@@ -44,3 +44,39 @@ The following use cases are related to the categories module of the application.
 | xref:requirements/usecases/category-003.adoc[Category-003] | As a user , I want to be able to delete a category. | High
 | xref:requirements/usecases/category-004.adoc[Category-004] | As a user , I want to be able to view a category. | High
 |===
+
+== Board use cases
+The following use cases are related to the boards module of the application. They describe the functionality that the application should provide to users in terms of financial tracking boards.
+[cols="1,3,1"]
+|===
+| code | Description | Priority
+| xref:requirements/usecases/board-001.adoc[Board-001] | As a user, I want to be able to create a new board for tracking my finances. | High
+| xref:requirements/usecases/board-002.adoc[Board-002] | As a user, I want to be able to edit my board details. | Medium
+| xref:requirements/usecases/board-003.adoc[Board-003] | As a user, I want to be able to delete a board. | High
+| xref:requirements/usecases/board-004.adoc[Board-004] | As a user, I want to be able to view my board with its balance and transactions. | High
+| xref:requirements/usecases/board-005.adoc[Board-005] | As a user, I want to be able to share my board with other users. | Low
+|===
+
+== Goals use cases
+The following use cases are related to the financial goals module of the application. They describe the functionality that the application should provide to users in terms of savings goals.
+[cols="1,3,1"]
+|===
+| code | Description | Priority
+| xref:requirements/usecases/goal-001.adoc[Goal-001] | As a user, I want to be able to create a savings goal. | Medium
+| xref:requirements/usecases/goal-002.adoc[Goal-002] | As a user, I want to be able to edit my savings goal details and target amount. | Medium
+| xref:requirements/usecases/goal-003.adoc[Goal-003] | As a user, I want to be able to delete a savings goal. | Medium
+| xref:requirements/usecases/goal-004.adoc[Goal-004] | As a user, I want to be able to view my progress towards my savings goals. | Medium
+| xref:requirements/usecases/goal-005.adoc[Goal-005] | As a user, I want to be able to contribute to a specific savings goal from my transaction savings. | Medium
+|===
+
+== Reports use cases
+The following use cases are related to the reporting functionality of the application. They describe the functionality that the application should provide to users in terms of financial reports and analytics.
+[cols="1,3,1"]
+|===
+| code | Description | Priority
+| xref:requirements/usecases/report-001.adoc[Report-001] | As a user, I want to be able to generate a monthly expense report. | Low
+| xref:requirements/usecases/report-002.adoc[Report-002] | As a user, I want to be able to see a breakdown of my expenses by category. | Low
+| xref:requirements/usecases/report-003.adoc[Report-003] | As a user, I want to be able to compare my spending across different time periods. | Low
+| xref:requirements/usecases/report-004.adoc[Report-004] | As a user, I want to be able to export my financial reports in different formats. | Low
+| xref:requirements/usecases/report-005.adoc[Report-005] | As a user, I want to be able to see forecasts of my future finances based on my spending patterns. | Low
+|===

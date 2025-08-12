@@ -1,11 +1,12 @@
 = Domain Model
 
+This diagram represents the conceptual model of an application for personal expense management. It shows the main entities and their relationships, allowing users to manage their finances through boards, categorized transactions, budgets, and savings goals.
+
 [plantuml]
 ....
     class User
     class Board 
     class Category
-    class Budget
     class Transaction
     class Goals
 
@@ -13,17 +14,18 @@
     Board ---> Goals : "has goals configured\n by the savings generated in\n the board"
     Board ---> Transaction : "stores 0..*"
     Category ---> Transaction : "categorizes 0..*"
-    Category ---> Budget : "configures"
 ....
 
 
 == Aggregate Model
+
+This diagram shows the aggregate structure of the domain according to Domain-Driven Design (DDD) principles. It identifies the main aggregates and their boundaries, defining how entities are organized to maintain consistency and encapsulation in the system.
+
 [plantuml]
 ....
     class User<<Aggregate>>
     class Board<<Aggregate Root>> 
     class Category<<Aggregate>>
-    class Budget
     class Transaction<<Aggregate>>
     class Goals<<Aggregate>>
 
@@ -32,6 +34,9 @@
     Board ||--{ Goals 
     Board ||--{ Transaction 
     Category |o--{ Transaction
-    Category ||--o| Budget
 ....
 
+== Database Model 
+This diagram represents the database model that supports the application. It shows the main tables and their relationships, providing a clear understanding of how data is stored in the system.
+
+image::MyBudgetDatabase.png[]
