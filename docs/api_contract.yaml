@@ -7,21 +7,201 @@ servers:
   - url: http://localhost:3000
     description: Local development server
 paths:
-  /example:
+  /boards:
     get:
-      summary: Example endpoint
-      description: An example endpoint to demonstrate the API structure.
+      summary: Obtains all boards from user
+      description: Obtain all boards from user
       responses:
-        '200':
+        "200":
           description: Successful response
           content:
             application/json:
               schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/boardList"
+        "404":
+          $ref: "#/components/responses/404"
+        "403":
+          $ref: "#/components/responses/403"
+        401:
+          $ref: "#/components/responses/401"
+    post:
+      summary: Create a board
+      description: Create a board
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  type: string
+      responses:
+        201:
+          description: Successfully created board
+          content:
+            application/json:
+              schema:
                 type: object
-                properties:
-                  message:
-                    type: string
-                    example: "Hello, world!"
+                $ref: "#/components/schemas/board"
+        "404":
+          $ref: "#/components/responses/404"
+        "403":
+          $ref: "#/components/responses/403"
+        401:
+          $ref: "#/components/responses/401"
+  /boards/{id}:
+    get:
+      summary: Obtains board by id
+      description: Obtains board by id
+      parameters:
+        - in: path
+          required: true
+          name: id
+          schema:
+            type: string
+      responses:
+        200:
+          description: Successfully created category
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/board"
+        404:
+          $ref: "#/components/responses/404"
+        403:
+          $ref: "#/components/responses/403"
+        401:
+          $ref: "#/components/responses/401"
+  /boards/{id}/categories:
+    post:
+      summary: create category
+      description: create category
+      parameters:
+        - in: path
+          required: true
+          name: id
+          schema:
+            type: string
+      responses:
+        201:
+          description: successful obtain board
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/category"
+        404:
+          $ref: "#/components/responses/404"
+        403:
+          $ref: "#/components/responses/403"
+        401:
+          $ref: "#/components/responses/401"
+  /boards/{id}/transactions:
+    post:
+      summary: create transaction
+      description: create transaction
+      parameters:
+        - in: path
+          required: true
+          name: id
+          schema:
+            type: string
+      responses:
+        201:
+          description: Successfully created transaction
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/transaction"
+        404:
+          $ref: "#/components/responses/404"
+        403:
+          $ref: "#/components/responses/403"
+        401:
+          $ref: "#/components/responses/401"
 components:
+  responses:
+    404:
+      description: Error emitted when resources are not found
+      content:
+        application/json:
+          schema:
+            type: object
+            $ref: "#/components/schemas/error"
+    403:
+      description: Error emitted when user is forbidden
+      content:
+        application/json:
+          schema:
+            type: object
+            $ref: "#/components/schemas/error"
+    401:
+      description: Error emitted when user is not authenticated
+      content:
+        application/json:
+          schema:
+            type: object
+            $ref: "#/components/schemas/error"
+
   schemas:
-    
+    boardList:
+      type: object
+      properties:
+        default_board:
+          type: object
+          $ref: "#/components/schemas/board"
+        boards:
+          type: array
+          items:
+            type: string
+    board:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        categories:
+          type: array
+          items:
+            $ref: "#/components/schemas/category"
+        transactions:
+          type: array
+          items:
+            $ref: "#/components/schemas/transaction"
+    category:
+      type: object
+      properties:
+        name:
+          type: string
+    transaction:
+      type: object
+      properties:
+        amount:
+          type: number
+        type:
+          type: string
+          enum:
+            - EXPENSE
+            - INCOME
+        name:
+          type: string
+        date:
+          type: string
+        category:
+          type: object
+          $ref: "#/components/schemas/category"
+    error:
+      type: object
+      properties:
+        message:
+          type: string
+        status:
+          type: number
